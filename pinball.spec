@@ -1,14 +1,17 @@
+# ToDo:
+# - make patch for the install routine hint- ///var/games/pinball/
+#
 Summary:	Emilia Pinball
 Summary(pl):	Pinball Emilia
 Name:		pinball
-Version:	0.2.0a
-Release:	1
+Version:	0.3.0
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
+# Source0-md5:	b81a062874e541914e258ddb9c1cc941
 Source0:	http://dl.sourceforge.net/pinball/%{name}-%{version}.tar.gz
-# Source0-md5:	ca060e1fce0c09288a9db6d8391ad232
 Source1:	%{name}.desktop
-Patch0:		%{name}-automake.patch
+#Patch0:		%{name}-automake.patch
 URL:		http://pinball.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
@@ -29,8 +32,8 @@ Emilia Pinball is a open source pinball game for Linux.
 Emilia Pinball jest otwartym pinballem dla Linuksa.
 
 %prep
-%setup -q -n %{name}-0.2.0
-%patch0 -p1
+%setup -q
+#%patch0 -p1
 
 %build
 rm -f missing
@@ -39,16 +42,17 @@ rm -f missing
 %{__autoconf}
 %{__autoheader}
 %{__automake}
+CPPFLAGS="-I/usr/X11R6/include %{rpmcflags}"
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Arcade,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} check
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 ln -s %{_datadir}/pinball/pinball.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -58,10 +62,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog NEWS
 %attr(755,root,root) %{_bindir}/pinball
+%dir %{_datadir}/pinball
 %{_datadir}/pinball
 %{_includedir}/pinball
 %dir %{_libdir}/pinball
 %{_libdir}/pinball/*a
 %attr(755,root,root) %{_libdir}/pinball/*.so*
-%{_applnkdir}/Games/Arcade/*
+%{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/*
