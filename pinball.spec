@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/pinball/%{name}-%{version}.tar.gz
+# Source0-md5:	ca060e1fce0c09288a9db6d8391ad232
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
 URL:		http://pinball.sourceforge.net/
