@@ -5,10 +5,10 @@ Version:	0.1.3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://prdownloads.sourceforge.net/pinball/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/pinball/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
-URL:		http://pinball.sourceforge.net
+URL:		http://pinball.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
