@@ -1,7 +1,7 @@
 Summary:	Emilia Pinball
 Summary(pl):	Pinball Emilia
 Name:		pinball
-Version:	0.1.3
+Version:	0.2.0a
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
