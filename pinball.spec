@@ -4,7 +4,7 @@ Name:		pinball
 Version:	0.1.3
 Release:	1
 License:	GPL
-Group:		X11/Application/Games
+Group:		X11/Applications/Games
 Source0:	http://prdownloads.sourceforge.net/pinball/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-automake.patch
