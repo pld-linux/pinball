@@ -5,5 +5,5 @@ Comment=OpenGL pinball game
 Comment[pl]=Pinball w OpenGL
 Exec=pinball
 Icon=pinball.xpm
-Terminal=0
+Terminal=false
 Type=Application
