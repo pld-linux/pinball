@@ -51,7 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} check
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 ln -s %{_datadir}/pinball/pinball.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 
@@ -61,12 +62,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog NEWS
-%attr(755,root,root) %{_bindir}/pinball*
+%attr(2755,root,games) %{_bindir}/pinball*
 %dir %{_datadir}/pinball
+%dir %{_libdir}/pinball
+%dir %attr(775,root,games) %{_var}/games/pinball
+%dir %attr(775,root,games) %{_var}/games/pinball/tux
+%dir %attr(775,root,games) %{_var}/games/pinball/professor
 %{_datadir}/pinball
 %{_includedir}/pinball
-%dir %{_libdir}/pinball
 %{_libdir}/pinball/*a
 %attr(755,root,root) %{_libdir}/pinball/*.so*
+%attr(664,root,games) %{_var}/games/pinball/tux/highscores
+%attr(664,root,games) %{_var}/games/pinball/professor/highscores
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/*
