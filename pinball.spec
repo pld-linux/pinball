@@ -4,12 +4,12 @@
 Summary:	Emilia Pinball
 Summary(pl):	Pinball Emilia
 Name:		pinball
-Version:	0.3.0
+Version:	0.3.1
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
-# Source0-md5:	b81a062874e541914e258ddb9c1cc941
 Source0:	http://dl.sourceforge.net/pinball/%{name}-%{version}.tar.gz
+# Source0-md5:	f28e8f49e0db8e9491e4d9f0c13c36c6
 Source1:	%{name}.desktop
 #Patch0:		%{name}-automake.patch
 URL:		http://pinball.sourceforge.net/
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog NEWS
-%attr(755,root,root) %{_bindir}/pinball
+%attr(755,root,root) %{_bindir}/pinball*
 %dir %{_datadir}/pinball
 %{_datadir}/pinball
 %{_includedir}/pinball
