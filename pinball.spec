@@ -28,7 +28,7 @@ Emilia Pinball is a open source pinball game for Linux.
 Emilia Pinball jest otwartym pinballem dla Linuksa.
 
 %prep
-%setup -q
+%setup -q -n %{name}-0.2.0
 %patch0 -p1
 
 %build
@@ -38,7 +38,7 @@ rm -f missing
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure2_13
+%configure
 %{__make}
 
 %install
