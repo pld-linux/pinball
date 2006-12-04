@@ -65,7 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog NEWS
 %attr(2755,root,games) %{_bindir}/pinball*
-%dir %{_datadir}/pinball
 %dir %{_libdir}/pinball
 %dir %attr(775,root,games) %{_var}/games/pinball
 %dir %attr(775,root,games) %{_var}/games/pinball/tux
