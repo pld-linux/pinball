@@ -2,7 +2,7 @@
 # - make patch for the install routine hint- ///var/games/pinball/
 #
 Summary:	Emilia Pinball
-Summary(pl):	Pinball Emilia
+Summary(pl.UTF-8):   Pinball Emilia
 Name:		pinball
 Version:	0.3.1
 Release:	2
@@ -30,7 +30,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Emilia Pinball is a open source pinball game for Linux.
 
-%description -l pl
+%description -l pl.UTF-8
 Emilia Pinball jest otwartym pinballem dla Linuksa.
 
 %prep
