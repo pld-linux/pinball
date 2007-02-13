@@ -2,7 +2,7 @@
 # - make patch for the install routine hint- ///var/games/pinball/
 #
 Summary:	Emilia Pinball
-Summary(pl.UTF-8):   Pinball Emilia
+Summary(pl.UTF-8):	Pinball Emilia
 Name:		pinball
 Version:	0.3.1
 Release:	2
