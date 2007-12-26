@@ -1,11 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Emilia Pinball
 Name[pl]=Pinball Emilia
 Comment=OpenGL pinball game
 Comment[pl]=Pinball w OpenGL
 Exec=pinball
-Icon=pinball.xpm
+Icon=pinball
 Terminal=false
 Type=Application
 Categories=Game;
